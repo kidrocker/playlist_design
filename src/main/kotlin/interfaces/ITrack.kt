@@ -1,6 +1,6 @@
 package interfaces
 
-import objects.Track
+import models.Track
 
 interface ITrack {
     fun addTrack(track: Track)

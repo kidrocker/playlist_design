@@ -1,4 +1,4 @@
-package objects
+package models
 
 data class Track(
     val id: Int,

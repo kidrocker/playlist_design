@@ -1,7 +1,12 @@
 import interfaces.ITrack
-import objects.Track
+import models.Track
+import models.User
 
-class Playlist: ITrack {
+class Playlist(private val user: User): ITrack {
+
+    private val mTrack = mutableSetOf<Track>()
+
+
     override fun addTrack(track: Track) {
         TODO("Not yet implemented")
     }
