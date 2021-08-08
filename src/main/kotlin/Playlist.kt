@@ -13,6 +13,7 @@ class Playlist(private val user: User): ITrack {
 
     /**
      * Add a new track to the playlist
+     *  @param track Track
      */
     override fun addTrack(track: Track) {
         if(getNumberOfTracks() < limit) {
@@ -23,6 +24,7 @@ class Playlist(private val user: User): ITrack {
 
     /**
      * Add multiple tracks to list
+     * @param tracks List<Track>
      */
     override fun addTracks(tracks: List<Track>) {
         val totalEstimate = getNumberOfTracks() + tracks.size
@@ -31,7 +33,7 @@ class Playlist(private val user: User): ITrack {
     }
 
     override fun deleteTrack(track: Track) {
-        TODO("Not yet implemented")
+        mTrack.remove(track)
     }
 
     override fun deleteTracks(tracks: List<Track>) {
