@@ -11,7 +11,10 @@ The class implements the interface ITrack that allows us to access and abstract 
 The interface exposes methods that allow us to manipulate the playlist.
 
 #### Local variables
-1. mTrack - Mutable **set** of track. The set was  preffered due to the following reasons:
+1. **mTrack** - Mutable **set** of track. The set was  preffered due to the following reasons:
     * Sets ignore duplicate objects which means that the playlist cannot contain 2 identical tracks.
     * Sets share majority of the methods with lists.
-2.     
+2. **limit** - Allows us to set the limit for pro and non-pro users.
+
+#### Methods
+

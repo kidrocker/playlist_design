@@ -6,6 +6,10 @@ class Playlist(private val user: User): ITrack {
 
     private val mTrack = mutableSetOf<Track>()
 
+    private var limit: Int = when(user.isPro){
+        true -> 200
+        false -> 100
+    }
 
     override fun addTrack(track: Track) {
         TODO("Not yet implemented")
