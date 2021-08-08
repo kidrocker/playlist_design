@@ -21,8 +21,13 @@ class Playlist(private val user: User): ITrack {
         else throw Exception("Maximum number of tracks exceeded")
     }
 
+    /**
+     * Add multiple tracks to list
+     */
     override fun addTracks(tracks: List<Track>) {
-        TODO("Not yet implemented")
+        val totalEstimate = getNumberOfTracks() + tracks.size
+        if(totalEstimate <= limit) mTrack.addAll(tracks)
+        else throw Exception("Maximum number of tracks exceeded")
     }
 
     override fun deleteTrack(track: Track) {
