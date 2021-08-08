@@ -11,8 +11,14 @@ class Playlist(private val user: User): ITrack {
         false -> 100
     }
 
+    /**
+     * Add a new track to the playlist
+     */
     override fun addTrack(track: Track) {
-        TODO("Not yet implemented")
+        if(getNumberOfTracks() < limit) {
+            mTrack.add(track)
+        }
+        else throw Exception("Maximum number of tracks exceeded")
     }
 
     override fun addTracks(tracks: List<Track>) {
