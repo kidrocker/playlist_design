@@ -32,6 +32,10 @@ class Playlist(private val user: User): ITrack {
         else throw Exception("Maximum number of tracks exceeded")
     }
 
+    /**
+     * Delete single track from the list
+     * @param track Track
+     */
     override fun deleteTrack(track: Track) {
         mTrack.remove(track)
     }
