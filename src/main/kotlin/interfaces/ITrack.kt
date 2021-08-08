@@ -9,6 +9,6 @@ interface ITrack {
     fun deleteTracks(tracks: List<Track>)
     fun getTotalDuration(): Long
     fun getNumberOfTracks(): Int
-    fun getTrack(id:Int):Track
+    fun getTrack(id:Int):Track?
     fun getAllTracks():List<Track>
 }
